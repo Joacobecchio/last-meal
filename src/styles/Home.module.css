@@ -1,0 +1,106 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+  }
+  
+  .main {
+    width: 100%;
+    max-width: 1200px;
+    padding: 1rem;
+  }
+  
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin-bottom: 2rem;
+    overflow: hidden;
+  }
+  
+  .hero img {
+    object-fit: cover;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .overlay h1 {
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .heroButtons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .button {
+    padding: 0.75rem 1.5rem;
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .button:hover {
+    background-color: #e5533d;
+  }
+  
+  .menuSection, .promoSection {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .menuItems, .promoItems {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .menuItem, .promoItem {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .menuItem img, .promoItem img {
+    border-radius: 5px;
+  }
+  
+  .promoButton {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .promoButton:hover {
+    background-color: #e5533d;
+  }
+  
