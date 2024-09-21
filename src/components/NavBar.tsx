@@ -1,48 +1,31 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './NavBar.module.css';
+import logo from '../../public/images/logo.svg';
 
 const NavBar: React.FC = () => {
   return (
-    <header className={styles.header}>
-      <nav className={styles.nav}>
-        <div className={styles.logo}>
-          <img src="/images/logo.svg" alt="Logo" />
+    <nav className={styles.navbar}>
+      <div className={styles.navContainer}>
+        <Link href="/" legacyBehavior>
+          <a className={styles.logoContainer}>
+            <Image src={logo} alt="Last Meal Logo" className={styles.logo} />
+            <span className={styles.logoText}>Last Meal</span>
+          </a>
+        </Link>
+        <div className={styles.navLinks}>
+          <Link href="/" legacyBehavior><a>Home</a></Link>
+          <Link href="/menu" legacyBehavior><a>Menu</a></Link>
+          <Link href="/promotions" legacyBehavior><a>Promotions</a></Link>
+          <Link href="/contact" legacyBehavior><a>Contact</a></Link>
         </div>
-        <ul className={styles.navList}>
-          <li className={styles.navItem}>
-            <Link href="/" legacyBehavior>
-              <a className={styles.navLink}>Home</a>
-            </Link>
-          </li>
-          <li className={styles.navItem}>
-            <Link href="/menu" legacyBehavior>
-              <a className={styles.navLink}>Menu</a>
-            </Link>
-          </li>
-          <li className={styles.navItem}>
-            <Link href="/promotions" legacyBehavior>
-              <a className={styles.navLink}>Promotions</a>
-            </Link>
-          </li>
-          <li className={styles.navItem}>
-            <Link href="/saght" legacyBehavior>
-              <a className={styles.navLink}>Saght</a>
-            </Link>
-          </li>
-          <li className={styles.navItem}>
-            <Link href="/contact" legacyBehavior>
-              <a className={styles.navLink}>Contact</a>
-            </Link>
-          </li>
-        </ul>
         <div className={styles.authButtons}>
-          <Link href="/login" legacyBehavior>
-            <a className={styles.loginButton}>Login</a>
-          </Link>
+          <Link href="/login" legacyBehavior><a className={styles.authButton}>Login</a></Link>
+          <Link href="/register" legacyBehavior><a className={styles.authButton}>Register</a></Link>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
   );
 };
 

@@ -1,3 +1,4 @@
+// src/pages/_document.tsx
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
 class MyDocument extends Document {
@@ -5,7 +6,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link rel="stylesheet" href="/styles/globals.css" />
+          <link rel="icon" href="/images/five-icon.svg" type="image/svg+xml" />
         </Head>
         <body>
           <Main />

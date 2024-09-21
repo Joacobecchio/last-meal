@@ -1,0 +1,16 @@
+.centralImageContainer {
+  margin-top: 80px; /* Ajusta este valor según la altura de tu navbar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px; /* Añadir padding para un poco de espacio alrededor */
+}
+
+.centralImage {
+  width: 100%;
+  max-width: 600px; /* Ajusta el tamaño máximo de la imagen según sea necesario */
+  height: auto;
+  border-radius: 10px; /* Añadir un poco de redondeo a las esquinas si lo deseas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añadir una sombra para darle un efecto más profesional */
+}

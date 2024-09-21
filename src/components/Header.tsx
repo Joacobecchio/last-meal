@@ -1,32 +1,26 @@
 import React from 'react';
 import Link from 'next/link';
-import styles from './Header.module.css';
+import Image from 'next/image';
+import styles from './Navbar.module.css';
+import logo from '../../public/images/logo.svg';
 
 const Header: React.FC = () => {
   return (
-    <header className={styles.header}>
-      <nav className={styles.nav}>
-        <Link href="/" legacyBehavior>
-          <a className={styles.navItem}>Home</a>
-        </Link>
-        <Link href="/menu" legacyBehavior>
-          <a className={styles.navItem}>Menu</a>
-        </Link>
-        <Link href="/promotions" legacyBehavior>
-          <a className={styles.navItem}>Promotions</a>
-        </Link>
-        <Link href="/contact" legacyBehavior>
-          <a className={styles.navItem}>Contact</a>
-        </Link>
-        <div className={styles.authButtons}>
-          <Link href="/login" legacyBehavior>
-            <a className={styles.button}>Login</a>
-          </Link>
-          <Link href="/register" legacyBehavior>
-            <a className={styles.button}>Register</a>
-          </Link>
-        </div>
+    <header className={styles.navbar}>
+      <div className={styles.navbarLogo}>
+        <Image src={logo} alt="Last Meal Logo" width={50} height={50} />
+        <span>Last Meal</span>
+      </div>
+      <nav className={styles.navbarLinks}>
+        <Link href="/">Home</Link>
+        <Link href="/menu">Menu</Link>
+        <Link href="/promotions">Promotions</Link>
+        <Link href="/contact">Contact</Link>
       </nav>
+      <div className={styles.navbarAuth}>
+        <Link href="/login">Login</Link>
+        <Link href="/register">Register</Link>
+      </div>
     </header>
   );
 };
